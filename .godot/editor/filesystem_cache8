@@ -1,5 +1,5 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1695135461
+::res://::1695146877
 icon.svg::CompressedTexture2D::2452894206539614532::1695127113::1695127118::1::::<><>::
 ::res://img/::1695134433
 ::res://img/chars/::1695134444
@@ -7,11 +7,11 @@ mushroom_sprite_sheet.png::CompressedTexture2D::1219881210304851195::1694762181:
 ::res://img/tiles/::1695134444
 tiles.png::CompressedTexture2D::8712124157314399413::1694762181::1695134444::1::::<><>::
 tileset.png::CompressedTexture2D::1442954879460322014::1694762181::1695134444::1::::<><>::
-::res://scenes/::1695135461
-level_01.tscn::PackedScene::7921501179190133402::1695135376::0::1::::<><>::uid://dwehoaj10duuv::::res://img/tiles/tiles.png<>uid://bidj02f33e6d5::::res://scenes/player.tscn
-player.tscn::PackedScene::2954717091006338464::1695135368::0::1::::<><>::uid://ba7g2rpfvh54k::::res://icon.svg
-::res://script/::1695135461
-player.gd::GDScript::-1::1695135452::0::1::::<>CharacterBody2D<>::
+::res://scenes/::1695146793
+level_01.gd::GDScript::-1::1695143593::0::1::::<>Node2D<>::
+level_01.tscn::PackedScene::7921501179190133402::1695146663::0::1::::<><>::uid://dwehoaj10duuv::::res://img/tiles/tiles.png<>res://scenes/level_01.gd<>uid://bidj02f33e6d5::::res://scenes/player.tscn<>uid://us8ix8v8fxv7::::res://img/tiles/tileset.png
+player.gd::GDScript::-1::1695146793::0::1::::<>CharacterBody2D<>::
+player.tscn::PackedScene::2954717091006338464::1695146663::0::1::::<><>::res://scenes/player.gd<>uid://rm6jaxvdavep::::res://img/chars/mushroom_sprite_sheet.png
 ::res://sounds/::1695134391
 ::res://sounds/fx/::1695134444
 cartoon-jump-6462.mp3::AudioStreamMP3::2710900433523231969::1694762181::1695134444::1::::<><>::
