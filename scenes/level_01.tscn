@@ -204,7 +204,7 @@ shape = SubResource("RectangleShape2D_a2hfb")
 
 [node name="NextLevelArea2D" type="Area2D" parent="."]
 position = Vector2(1077, -63)
-collision_mask = 3
+collision_mask = 2
 metadata/_edit_group_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="NextLevelArea2D"]
