@@ -1,17 +1,62 @@
-[gd_scene load_steps=4 format=3 uid="uid://bidj02f33e6d5"]
+[gd_scene load_steps=7 format=3 uid="uid://bidj02f33e6d5"]
 
 [ext_resource type="Script" path="res://scenes/player.gd" id="1_awybf"]
-[ext_resource type="Texture2D" uid="uid://ba7g2rpfvh54k" path="res://icon.svg" id="1_u8kek"]
+[ext_resource type="Texture2D" uid="uid://rm6jaxvdavep" path="res://img/chars/mushroom_sprite_sheet.png" id="2_im8d8"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_3k10s"]
-height = 24.0
+radius = 7.0
+height = 18.0
+
+[sub_resource type="Animation" id="Animation_ppekb"]
+resource_name = "run"
+length = 0.8
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.6),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 1, 1]
+}
+
+[sub_resource type="Animation" id="Animation_o5da3"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_8mv27"]
+_data = {
+"RESET": SubResource("Animation_o5da3"),
+"run": SubResource("Animation_ppekb")
+}
 
 [node name="CharacterBody2D" type="CharacterBody2D"]
 script = ExtResource("1_awybf")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-scale = Vector2(0.1875, 0.1875)
-texture = ExtResource("1_u8kek")
+scale = Vector2(0.75, 0.75)
+texture = ExtResource("2_im8d8")
+hframes = 8
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CapsuleShape2D_3k10s")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_8mv27")
+}
