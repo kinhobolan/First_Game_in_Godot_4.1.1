@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://beo7k8vj5vvdw"
+path="res://.godot/imported/Calimba - E's Jammy Jams.mp3-835e7806dfcbd0918e4d4741390f0bc6.mp3str"
+
+[deps]
+
+source_file="res://sounds/music/Calimba - E's Jammy Jams.mp3"
+dest_files=["res://.godot/imported/Calimba - E's Jammy Jams.mp3-835e7806dfcbd0918e4d4741390f0bc6.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
