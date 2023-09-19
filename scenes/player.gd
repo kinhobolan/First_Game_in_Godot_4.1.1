@@ -5,6 +5,7 @@ const SPEED = 120.0
 const JUMP_VELOCITY = -320.0
 @onready var sprite_2d = $Sprite2D
 @onready var animation_player = $AnimationPlayer
+@onready var jump_sound = $JumpSound
 
 
 
@@ -22,6 +23,7 @@ func _physics_process(delta):
 
 	# Handle Jump.
 	if Input.is_action_just_pressed("jump") and is_on_floor():
+		jump_sound.play()
 		velocity.y = JUMP_VELOCITY
 
 	# Get the input direction and handle the movement/deceleration.
@@ -39,6 +41,7 @@ func _physics_process(delta):
 		
 	if !is_on_floor():
 		animation_player.play("jump")
+		
 		
 	if velocity.x >= 0:
 		sprite_2d.flip_h = false

@@ -1,7 +1,8 @@
-[gd_scene load_steps=9 format=3 uid="uid://bidj02f33e6d5"]
+[gd_scene load_steps=10 format=3 uid="uid://bidj02f33e6d5"]
 
 [ext_resource type="Script" path="res://scenes/player.gd" id="1_awybf"]
 [ext_resource type="Texture2D" uid="uid://rm6jaxvdavep" path="res://img/chars/mushroom_sprite_sheet.png" id="2_im8d8"]
+[ext_resource type="AudioStream" uid="uid://bevges8ucht82" path="res://sounds/fx/cartoon-jump-6462.mp3" id="3_7k3vu"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_3k10s"]
 radius = 7.0
@@ -96,3 +97,6 @@ autoplay = "idle"
 libraries = {
 "": SubResource("AnimationLibrary_8mv27")
 }
+
+[node name="JumpSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_7k3vu")

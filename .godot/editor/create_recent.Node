@@ -1,6 +1,7 @@
-AnimationPlayer
 CollisionShape2D
 Area2D
+AudioStreamPlayer
+AnimationPlayer
 Camera2D
 Sprite2D
 CharacterBody2D
