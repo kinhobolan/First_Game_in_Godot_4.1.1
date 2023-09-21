@@ -1,5 +1,5 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1695232009
+::res://::1695319288
 export_presets.cfg::TextFile::-1::1695156074::0::1::::<><>::
 icon.svg::CompressedTexture2D::2452894206539614532::1695127113::1695127118::1::::<><>::
 ::res://Build/::1695156074
@@ -7,9 +7,8 @@ Demo.apple-touch-icon.png::CompressedTexture2D::6815419961556327668::1695156074:
 Demo.icon.png::CompressedTexture2D::6557849525521527099::1695156073::1695155983::1::::<><>::
 Demo.png::CompressedTexture2D::7730485194553737779::1695156073::1695155983::1::::<><>::
 ::res://img/::1695153041
-::res://img/chars/::1695232325
-bird.png::CompressedTexture2D::1341878218562008061::1695231925::1695232070::1::::<><>::
-bird_02.png::CompressedTexture2D::4948985302472058197::1695232325::1695232326::1::::<><>::
+::res://img/chars/::1695324806
+fly.png::CompressedTexture2D::7952327702907151273::1695324806::1695324851::1::::<><>::
 mushroom_sprite_sheet.png::CompressedTexture2D::1219881210304851195::1694762181::1695134444::1::::<><>::
 ::res://img/items/::1695232068
 flag.png::CompressedTexture2D::6369121854878100007::1695153372::1695153373::1::::<><>::
@@ -17,14 +16,14 @@ flag.png::CompressedTexture2D::6369121854878100007::1695153372::1695153373::1:::
 tiles.png::CompressedTexture2D::8712124157314399413::1694762181::1695134444::1::::<><>::
 tileset.png::CompressedTexture2D::1442954879460322014::1694762181::1695134444::1::::<><>::
 tileset_02.png::CompressedTexture2D::9004060503254643308::1695230578::1695230584::1::::<><>::
-::res://scenes/::1695232181
-enemy.tscn::PackedScene::800941486192311287::1695232181::0::1::::<><>::uid://teaskf04r430::::res://img/chars/bird.png
+::res://scenes/::1695319373
+enemy.tscn::PackedScene::800941486192311287::1695319373::0::1::::<><>::
 Flag.gd::GDScript::-1::1695153790::0::1::::<>Sprite2D<>::
 level_01.gd::GDScript::-1::1695154516::0::1::::<>Node2D<>::
-level_01.tscn::PackedScene::7921501179190133402::1695231504::0::1::::<><>::res://scenes/level_01.gd<>uid://bidj02f33e6d5::::res://scenes/player.tscn<>uid://d1jvtcqykhkg7::::res://img/tiles/tileset_02.png<>uid://cw0irhn6icahj::::res://img/items/flag.png
+level_01.tscn::PackedScene::7921501179190133402::1695319373::0::1::::<><>::res://scenes/level_01.gd<>uid://bidj02f33e6d5::::res://scenes/player.tscn<>uid://d1jvtcqykhkg7::::res://img/tiles/tileset_02.png<>uid://cw0irhn6icahj::::res://img/items/flag.png
 level_02.tscn::PackedScene::7890936074902463117::1695156085::0::1::::<><>::res://scenes/level_01.gd<>uid://dwehoaj10duuv
 player.gd::GDScript::-1::1695149182::0::1::::<>CharacterBody2D<>::
-player.tscn::PackedScene::2954717091006338464::1695231181::0::1::::<><>::res://scenes/player.gd<>uid://rm6jaxvdavep::::res://img/chars/mushroom_sprite_sheet.png<>uid://bevges8ucht82::::res://sounds/fx/cartoon-jump-6462.mp3
+player.tscn::PackedScene::2954717091006338464::1695319373::0::1::::<><>::res://scenes/player.gd<>uid://rm6jaxvdavep::::res://img/chars/mushroom_sprite_sheet.png<>uid://bevges8ucht82::::res://sounds/fx/cartoon-jump-6462.mp3
 ::res://sounds/::1695155041
 ::res://sounds/fx/::1695134444
 cartoon-jump-6462.mp3::AudioStreamMP3::2710900433523231969::1694762181::1695134444::1::::<><>::
