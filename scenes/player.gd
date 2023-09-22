@@ -6,11 +6,20 @@ const JUMP_VELOCITY = -320.0
 @onready var sprite_2d = $Sprite2D
 @onready var animation_player = $AnimationPlayer
 @onready var jump_sound = $JumpSound
+@onready var marker_2d = $Node2D/Shotgun/Marker2D
 
 
+@export var bullets_node2D : Node2D
+
+@onready var node_2d = $Node2D
+@onready var shotgun  =$Node2D/Shotgun
+
+var _bullet = preload("res://scenes/bullet.tscn")
 
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
+
+var cont = 0;
 
 func _ready():
 	print("ready")
@@ -53,3 +62,25 @@ func _physics_process(delta):
 	move_and_slide()
 	
 	
+func _input(event):
+	if event is InputEventMouseMotion:
+		var mousePos = get_global_mouse_position()
+		node_2d.look_at(mousePos)
+		
+		
+		if mousePos.x < node_2d.global_position.x:
+			node_2d.scale = Vector2(1,-1)  
+		elif mousePos.x > node_2d.global_position.x:
+			node_2d.scale = Vector2(1,1)  
+			
+		
+	if Input.is_action_just_pressed("shoot"):
+		var bullet = _bullet.instantiate()
+		bullets_node2D.add_child(bullet)
+		bullet.look_at(get_global_mouse_position())
+		bullet.global_position = marker_2d.global_position
+	
+		
+		
+		
+		

@@ -2,3 +2,6 @@ res://scenes/enemy.tscn
 res://scenes/level_01.tscn
 res://scenes/player.tscn
 res://scenes/enemy.gd
+res://scenes/player.gd
+res://scenes/bullet.tscn
+res://scenes/bullet.gd

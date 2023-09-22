@@ -106,9 +106,6 @@ stream = ExtResource("3_7k3vu")
 position = Vector2(0, 3.005)
 
 [node name="Shotgun" type="Sprite2D" parent="Node2D"]
-position = Vector2(9, 1)
+position = Vector2(9, 0.995)
 scale = Vector2(0.3, 0.3)
 texture = ExtResource("4_62qgj")
-
-[node name="Marker2D" type="Marker2D" parent="Node2D/Shotgun"]
-position = Vector2(26.6667, -3.35)

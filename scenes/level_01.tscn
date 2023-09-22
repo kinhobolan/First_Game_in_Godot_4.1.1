@@ -333,9 +333,10 @@ layer_1/y_sort_origin = 0
 layer_1/z_index = 0
 layer_1/tile_data = PackedInt32Array(3, 65541, 3, 2, 5, 3, 4, 65541, 3, 5, 131077, 3, 65538, 5, 5, 65539, 65541, 5, 65540, 65541, 5, 65541, 131077, 5, 131094, 5, 3, 196630, 5, 5, 196631, 131077, 5, 131095, 131077, 3, 131100, 5, 3, 196636, 5, 5, 196637, 131077, 5, 131101, 131077, 3, 34, 5, 3, 65570, 5, 5, 65571, 131077, 5, 35, 131077, 3, 65576, 5, 5, 40, 5, 3, 41, 65541, 3, 65577, 65541, 5, 42, 65541, 3, 65578, 65541, 5, -65491, 5, 5, -131027, 5, 3, -65490, 131077, 5, -131026, 131077, 3, 43, 131077, 3, 65579, 131077, 5, -65485, 5, 3, 51, 5, 4, 65587, 5, 5, 65588, 131077, 5, 52, 131077, 4, -65484, 131077, 3, -131016, 5, 3, -65480, 5, 5, -196545, 5, 4, -131009, 5, 4, -65473, 5, 4, 63, 5, 4, 65599, 5, 5, 65600, 131077, 5, 64, 131077, 4, -65472, 131077, 4, -131008, 131077, 4, -196544, 131077, 4, 65603, 5, 5, 67, 5, 4, -65469, 5, 4, -131005, 5, 4, -196541, 5, 4, -262077, 5, 3, 65604, 131077, 5, 68, 131077, 4, -65468, 131077, 4, -131004, 131077, 4, -196540, 131077, 4, -262076, 131077, 3, -262081, 5, 3, -262080, 131077, 3, -131015, 131077, 3, -65479, 131077, 5)
 
-[node name="CharacterBody2D" parent="." groups=["PlayerGroup"] instance=ExtResource("2_6x0ph")]
+[node name="CharacterBody2D" parent="." node_paths=PackedStringArray("bullets_node2D") groups=["PlayerGroup"] instance=ExtResource("2_6x0ph")]
 position = Vector2(7, 4)
 collision_layer = 2
+bullets_node2D = NodePath("../Bullets")
 
 [node name="Camera2D" type="Camera2D" parent="CharacterBody2D"]
 zoom = Vector2(4, 4)
@@ -379,6 +380,8 @@ rotates = false
 [node name="Enemy" parent="Path2D/PathFollow2D" node_paths=PackedStringArray("path_fallow") instance=ExtResource("5_wklo1")]
 path_fallow = NodePath("..")
 speed = 0.1
+
+[node name="Bullets" type="Node2D" parent="."]
 
 [connection signal="body_entered" from="DeathArea2D" to="." method="_on_area_2d_body_entered"]
 [connection signal="body_entered" from="NextLevelArea2D" to="." method="_on_next_level_area_2d_body_entered"]
