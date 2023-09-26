@@ -1,3 +1,5 @@
-res://scenes/level_01.tscn::d187ef9dbb620ec9c94c6b2a0ffd0065::1695155446::res://.godot/exported/133200997/export-9db58f77472441aec537bb99f6c221d5-level_01.scn
-res://scenes/level_02.tscn::4a70fee773b91f36381435c2cda5e1c6::1695155446::res://.godot/exported/133200997/export-4f231799a777ecad0336ce0a2bae57d7-level_02.scn
-res://scenes/player.tscn::12a7ed8ed2e4b339341b2b40e26b60e4::1695155446::res://.godot/exported/133200997/export-234fb6894ec6226e856ab7f825500d3d-player.scn
+res://scenes/level_01.tscn::11be62034ff40e9e4d629c666d758d71::1695755956::res://.godot/exported/133200997/export-9db58f77472441aec537bb99f6c221d5-level_01.scn
+res://scenes/level_02.tscn::4a70fee773b91f36381435c2cda5e1c6::1695156085::res://.godot/exported/133200997/export-4f231799a777ecad0336ce0a2bae57d7-level_02.scn
+res://scenes/player.tscn::dd7a8f309d7d3cb77cbed03f9c6270d5::1695755956::res://.godot/exported/133200997/export-234fb6894ec6226e856ab7f825500d3d-player.scn
+res://scenes/bullet.tscn::54e61518918d30230dcf2505d327cf4e::1695755956::res://.godot/exported/133200997/export-6d8e6ff1e6f20a36e0402d27c623c86c-bullet.scn
+res://scenes/enemy.tscn::73bb5d6355021a6d7d81c2eeb66c1925::1695405059::res://.godot/exported/133200997/export-a930820ec0ab16db6719aff4daa500f9-enemy.scn
