@@ -79,6 +79,7 @@ func _input(event):
 		bullets_node2D.add_child(bullet)
 		bullet.look_at(get_global_mouse_position())
 		bullet.global_position = marker_2d.global_position
+		print (get_global_mouse_position())
 	
 		
 		
