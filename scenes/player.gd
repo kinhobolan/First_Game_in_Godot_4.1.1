@@ -77,9 +77,10 @@ func _input(event):
 	if Input.is_action_just_pressed("shoot"):
 		var bullet = _bullet.instantiate()
 		bullets_node2D.add_child(bullet)
-		bullet.look_at(get_global_mouse_position())
 		bullet.global_position = marker_2d.global_position
-		print (get_global_mouse_position())
+		bullet.look_at(get_global_mouse_position())		
+		
+		
 	
 		
 		
