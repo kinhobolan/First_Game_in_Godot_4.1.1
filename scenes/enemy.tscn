@@ -27,7 +27,6 @@ animations = [{
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_8dge0"]
 radius = 9.0
-height = 30.0
 
 [node name="Enemy" type="CharacterBody2D"]
 script = ExtResource("1_36qmr")

@@ -1,10 +1,11 @@
-[gd_scene load_steps=11 format=3 uid="uid://dk4h74660lsf7"]
+[gd_scene load_steps=12 format=3 uid="uid://dk4h74660lsf7"]
 
 [ext_resource type="Script" path="res://scenes/level_01.gd" id="1_rtu5g"]
 [ext_resource type="PackedScene" uid="uid://bidj02f33e6d5" path="res://scenes/player.tscn" id="2_6x0ph"]
 [ext_resource type="Texture2D" uid="uid://d1jvtcqykhkg7" path="res://img/tiles/tileset_02.png" id="2_amh5v"]
 [ext_resource type="Texture2D" uid="uid://cw0irhn6icahj" path="res://img/items/flag.png" id="5_lcl1g"]
 [ext_resource type="PackedScene" uid="uid://ln8nh8oiiudb" path="res://scenes/enemy.tscn" id="5_wklo1"]
+[ext_resource type="AudioStream" uid="uid://do2gdnt2546ud" path="res://sounds/music/Super Mario Bros.mp3" id="6_44rd4"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ynai8"]
 texture = ExtResource("2_amh5v")
@@ -382,6 +383,11 @@ path_fallow = NodePath("..")
 speed = 0.1
 
 [node name="Bullets" type="Node2D" parent="."]
+
+[node name="SoundTrack" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("6_44rd4")
+volume_db = 0.782
+autoplay = true
 
 [connection signal="body_entered" from="DeathArea2D" to="." method="_on_area_2d_body_entered"]
 [connection signal="body_entered" from="NextLevelArea2D" to="." method="_on_next_level_area_2d_body_entered"]

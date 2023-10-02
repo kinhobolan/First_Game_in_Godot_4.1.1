@@ -1,10 +1,15 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1695756310
-export_presets.cfg::TextFile::-1::1695156074::0::1::::<><>::
+::res://::1696271336
+export_presets.cfg::TextFile::-1::1696109447::0::1::::<><>::
 icon.svg::CompressedTexture2D::2452894206539614532::1695127113::1695127118::1::::<><>::
-::res://Build/::1695756205
+::res://Build/::1696107654
+::res://Build/Web/::1696109919
+index.apple-touch-icon.png::CompressedTexture2D::7032157661604867158::1696109447::1696109919::1::::<><>::
+index.icon.png::CompressedTexture2D::989154996605929431::1696109447::1696109919::1::::<><>::
+index.png::CompressedTexture2D::2812776035653686926::1696109447::1696109919::1::::<><>::
+::res://Build/Win/::1696107631
 ::res://img/::1695153041
-::res://img/chars/::1695756849
+::res://img/chars/::1695756955
 fly - Copy.png::CompressedTexture2D::3934692993655375717::1695324806::1695756849::1::::<><>::
 fly.png::CompressedTexture2D::7952327702907151273::1695756951::1695756955::1::::<><>::
 mushroom_sprite_sheet.png::CompressedTexture2D::1219881210304851195::1694762181::1695134444::1::::<><>::
@@ -16,19 +21,20 @@ gun.png::CompressedTexture2D::4558473094587995703::1695402924::1695402925::1::::
 tiles.png::CompressedTexture2D::8712124157314399413::1694762181::1695134444::1::::<><>::
 tileset.png::CompressedTexture2D::1442954879460322014::1694762181::1695134444::1::::<><>::
 tileset_02.png::CompressedTexture2D::9004060503254643308::1695230578::1695230584::1::::<><>::
-::res://scenes/::1695756917
+::res://scenes/::1696108065
 bullet.gd::GDScript::-1::1695756407::0::1::::<>Area2D<>::
-bullet.tscn::PackedScene::8804574312547070671::1695756916::0::1::::<><>::uid://dy5l3ki10s78::::res://img/items/bullet.png<>res://scenes/bullet.gd
+bullet.tscn::PackedScene::8804574312547070671::1696108065::0::1::::<><>::uid://dy5l3ki10s78::::res://img/items/bullet.png<>res://scenes/bullet.gd
 enemy.gd::GDScript::-1::1695401478::0::1::::<>CharacterBody2D<>::
-enemy.tscn::PackedScene::800941486192311287::1695756917::0::1::::<><>::uid://dlkfw71unyjdp::::res://img/chars/fly.png<>res://scenes/enemy.gd
+enemy.tscn::PackedScene::800941486192311287::1696108065::0::1::::<><>::uid://dlkfw71unyjdp::::res://img/chars/fly.png<>res://scenes/enemy.gd
 Flag.gd::GDScript::-1::1695153790::0::1::::<>Sprite2D<>::
 level_01.gd::GDScript::-1::1695154516::0::1::::<>Node2D<>::
-level_01.tscn::PackedScene::7921501179190133402::1695756916::0::1::::<><>::res://scenes/level_01.gd<>uid://bidj02f33e6d5::::res://scenes/player.tscn<>uid://d1jvtcqykhkg7::::res://img/tiles/tileset_02.png<>uid://cw0irhn6icahj::::res://img/items/flag.png<>uid://ln8nh8oiiudb::::res://scenes/enemy.tscn
+level_01.tscn::PackedScene::7921501179190133402::1696108065::0::1::::<><>::res://scenes/level_01.gd<>uid://bidj02f33e6d5::::res://scenes/player.tscn<>uid://d1jvtcqykhkg7::::res://img/tiles/tileset_02.png<>uid://cw0irhn6icahj::::res://img/items/flag.png<>uid://ln8nh8oiiudb::::res://scenes/enemy.tscn<>uid://do2gdnt2546ud::::res://sounds/music/Super Mario Bros.mp3
 level_02.tscn::PackedScene::7890936074902463117::1695156085::0::1::::<><>::res://scenes/level_01.gd<>uid://dwehoaj10duuv
-player.gd::GDScript::-1::1695407699::0::1::::<>CharacterBody2D<>::
-player.tscn::PackedScene::2954717091006338464::1695756916::0::1::::<><>::res://scenes/player.gd<>uid://rm6jaxvdavep::::res://img/chars/mushroom_sprite_sheet.png<>uid://bevges8ucht82::::res://sounds/fx/cartoon-jump-6462.mp3<>uid://b57fnecdpbmmx::::res://img/items/gun.png
+player.gd::GDScript::-1::1695758700::0::1::::<>CharacterBody2D<>::
+player.tscn::PackedScene::2954717091006338464::1696108065::0::1::::<><>::res://scenes/player.gd<>uid://rm6jaxvdavep::::res://img/chars/mushroom_sprite_sheet.png<>uid://bevges8ucht82::::res://sounds/fx/cartoon-jump-6462.mp3<>uid://b57fnecdpbmmx::::res://img/items/gun.png
 ::res://sounds/::1695155041
 ::res://sounds/fx/::1695134444
 cartoon-jump-6462.mp3::AudioStreamMP3::2710900433523231969::1694762181::1695134444::1::::<><>::
-::res://sounds/music/::1695155077
+::res://sounds/music/::1696107336
 Calimba - E's Jammy Jams.mp3::AudioStreamMP3::2698039914670949432::1689620196::1695155077::1::::<><>::
+Super Mario Bros.mp3::AudioStreamMP3::8198014434132542607::1696107311::1696107336::1::::<><>::
