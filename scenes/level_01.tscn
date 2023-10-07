@@ -348,9 +348,11 @@ drag_top_margin = 0.71
 editor_draw_drag_margin = true
 
 [node name="DeathArea2D" type="Area2D" parent="."]
+visible = false
 collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="DeathArea2D"]
+visible = false
 position = Vector2(339, 125)
 shape = SubResource("RectangleShape2D_a2hfb")
 
@@ -386,7 +388,7 @@ speed = 0.1
 
 [node name="SoundTrack" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("6_44rd4")
-volume_db = 0.782
+volume_db = -6.679
 autoplay = true
 
 [connection signal="body_entered" from="DeathArea2D" to="." method="_on_area_2d_body_entered"]
