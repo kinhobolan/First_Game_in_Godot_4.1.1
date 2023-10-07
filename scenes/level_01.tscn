@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://dk4h74660lsf7"]
+[gd_scene load_steps=13 format=3 uid="uid://dk4h74660lsf7"]
 
 [ext_resource type="Script" path="res://scenes/level_01.gd" id="1_rtu5g"]
 [ext_resource type="PackedScene" uid="uid://bidj02f33e6d5" path="res://scenes/player.tscn" id="2_6x0ph"]
@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://cw0irhn6icahj" path="res://img/items/flag.png" id="5_lcl1g"]
 [ext_resource type="PackedScene" uid="uid://ln8nh8oiiudb" path="res://scenes/enemy.tscn" id="5_wklo1"]
 [ext_resource type="AudioStream" uid="uid://do2gdnt2546ud" path="res://sounds/music/Super Mario Bros.mp3" id="6_44rd4"]
+[ext_resource type="AudioStream" uid="uid://d2j8508v1li78" path="res://sounds/fx/shotgun.wav" id="7_rt53f"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ynai8"]
 texture = ExtResource("2_amh5v")
@@ -338,6 +339,7 @@ layer_1/tile_data = PackedInt32Array(3, 65541, 3, 2, 5, 3, 4, 65541, 3, 5, 13107
 position = Vector2(7, 4)
 collision_layer = 2
 bullets_node2D = NodePath("../Bullets")
+pitchArray = Array[float]([0.8, 0.85, 0.9, 0.95, 1.0])
 
 [node name="Camera2D" type="Camera2D" parent="CharacterBody2D"]
 zoom = Vector2(4, 4)
@@ -348,11 +350,9 @@ drag_top_margin = 0.71
 editor_draw_drag_margin = true
 
 [node name="DeathArea2D" type="Area2D" parent="."]
-visible = false
 collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="DeathArea2D"]
-visible = false
 position = Vector2(339, 125)
 shape = SubResource("RectangleShape2D_a2hfb")
 
@@ -388,8 +388,15 @@ speed = 0.1
 
 [node name="SoundTrack" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("6_44rd4")
-volume_db = -6.679
+volume_db = -5.746
 autoplay = true
+max_polyphony = 50
+bus = &"Music"
+
+[node name="SoundFxShotGun" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("7_rt53f")
+volume_db = -7.06
+bus = &"SoundFX"
 
 [connection signal="body_entered" from="DeathArea2D" to="." method="_on_area_2d_body_entered"]
 [connection signal="body_entered" from="NextLevelArea2D" to="." method="_on_next_level_area_2d_body_entered"]

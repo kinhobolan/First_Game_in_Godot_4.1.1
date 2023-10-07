@@ -1,0 +1,32 @@
+[gd_scene load_steps=4 format=3 uid="uid://dthudri7maerh"]
+
+[ext_resource type="Texture2D" uid="uid://cw0irhn6icahj" path="res://img/items/flag.png" id="1_cj4br"]
+[ext_resource type="Script" path="res://scenes/teste_collision.gd" id="1_ybdsh"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0geaw"]
+size = Vector2(680, 45)
+
+[node name="Node2D" type="Node2D"]
+position = Vector2(560, 155)
+script = ExtResource("1_ybdsh")
+
+[node name="RigidBody2D" type="RigidBody2D" parent="."]
+collision_layer = 4
+collision_mask = 8
+
+[node name="Flag" type="Sprite2D" parent="RigidBody2D"]
+scale = Vector2(5, 5)
+texture = ExtResource("1_cj4br")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="RigidBody2D"]
+polygon = PackedVector2Array(-30, -84, 2, -85, 87, -30, -6, 34, -5, 88, -25, 89)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+collision_layer = 8
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(21, 209)
+shape = SubResource("RectangleShape2D_0geaw")
+
+[connection signal="child_entered_tree" from="StaticBody2D" to="." method="_on_static_body_2d_child_entered_tree"]

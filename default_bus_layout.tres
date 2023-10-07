@@ -1,0 +1,27 @@
+[gd_resource type="AudioBusLayout" load_steps=2 format=3 uid="uid://1me32kga7h4c"]
+
+[sub_resource type="AudioEffectReverb" id="AudioEffectReverb_hlk1k"]
+resource_name = "Reverb"
+dry = 0.05
+
+[resource]
+bus/1/name = &"FX_Reverb"
+bus/1/solo = false
+bus/1/mute = false
+bus/1/bypass_fx = false
+bus/1/volume_db = -1.81699
+bus/1/send = &"Master"
+bus/1/effect/0/effect = SubResource("AudioEffectReverb_hlk1k")
+bus/1/effect/0/enabled = true
+bus/2/name = &"Music"
+bus/2/solo = false
+bus/2/mute = false
+bus/2/bypass_fx = true
+bus/2/volume_db = -2.70802
+bus/2/send = &"Master"
+bus/3/name = &"SoundFX"
+bus/3/solo = false
+bus/3/mute = false
+bus/3/bypass_fx = false
+bus/3/volume_db = -6.57885
+bus/3/send = &"Master"

@@ -7,6 +7,7 @@ const JUMP_VELOCITY = -320.0
 @onready var animation_player = $AnimationPlayer
 @onready var jump_sound = $JumpSound
 @onready var marker_2d = $Node2D/Shotgun/Marker2D
+@onready var sound_fx_shot_gun = $"../SoundFxShotGun"
 
 
 @export var bullets_node2D : Node2D
@@ -20,6 +21,8 @@ var _bullet = preload("res://scenes/bullet.tscn")
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 
 var cont = 0;
+@export_category("Custom Audio")
+@export var pitchArray : Array[float] = []
 
 func _ready():
 	print("ready")
@@ -75,12 +78,17 @@ func _input(event):
 			
 		
 	if Input.is_action_just_pressed("shoot"):
-		var bullet = _bullet.instantiate()
-		bullets_node2D.add_child(bullet)
-		bullet.global_position = marker_2d.global_position
-		bullet.look_at(get_global_mouse_position())		
+		shot()
 		
 		
+
+func shot():
+	var bullet = _bullet.instantiate()
+	bullets_node2D.add_child(bullet)
+	bullet.global_position = marker_2d.global_position
+	bullet.look_at(get_global_mouse_position())	
+	sound_fx_shot_gun.pitch_scale = pitchArray[randi()%pitchArray.size()]
+	sound_fx_shot_gun.play()	
 	
 		
 		
